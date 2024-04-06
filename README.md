@@ -13,8 +13,8 @@ VS Code:
 
 ## Files
 
-
 * `hellothread.c` main program to lauch threads
+* `Makefile` file containing commands for compiling
 
 ## Data
 
@@ -32,30 +32,9 @@ If an array element is True, the cell is alive, otherwise it's dead.
 _[This is a tree of functions and their short descriptions]_
 
 * `main()`
-  * `init()`
-    * `life_init()`: Initializes the cell array to random 
-      * `grid_alloc()`: Allocate space for the cell grid
-      * `randomize()`: Randomize the contents of the cell grid
-    * `display_init()`: Initializes the display
-      * `clear_screen()`
-  * `run()`: Main game running routine
-    * `life_update()`: Update cell data
-      * `update_cell()`: updates a cell based on its neighbors
-        * `get_neighbor_count()`: counts neighbors for a cell
-    * `life_get_cells()`: Get cell status
-    * `display_update()`: Display cells
-      * `home_cursor()`
-    * `delay()`: Delay between frames
-  * `life_shutdown()`: Call before destruction (currently unreachable)
-    * `grid_free()`: Free cell grid memory
+  * `pthread_create()`: creates and starts a new thread on the passed function
+  * `pthread_join()`: forced thread that calls function to wait for thread passed in to finish
+
+* `countUp()`: counts from 0 to 4 printing thread name and current number
 
 ## Notes
-
-_[Any additional notes, bugs, etc.]_
-
-* `^C` to quit.
-* `life_init()` should allow different kinds of initializations, not
-  just random.
-* UI could be added so the user could draw patterns.
-* Maybe add some preprogrammed patterns, spaceships, etc.
-* Bug: display totally messed up on screens smaller than 80x24

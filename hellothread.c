@@ -1,8 +1,5 @@
 #include <stdio.h>
 #include <pthread.h>
-#include <stdlib.h>
-#include <unistd.h>
-
 
 void *countUp(void *arg) {
     char *threadName = (char *)arg;

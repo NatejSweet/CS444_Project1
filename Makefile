@@ -3,15 +3,11 @@ CFLAGS = -Wall -Wextra -Werror -pthread
 
 TARGET = hellothread
 SRC = hellothread.c
-OBJ = $(SRC:.c=.o)
 
 all: $(TARGET)
 
-$(TARGET): $(OBJ)
+$(TARGET): $(SRC)
 	$(CC) $(CFLAGS) -o $@ $^
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $<
-
 clean:
-	rm -f $(OBJ) $(TARGET)
+	rm -f $(TARGET)

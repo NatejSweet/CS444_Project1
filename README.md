@@ -18,14 +18,7 @@ VS Code:
 
 ## Data
 
-_[Description of the main data used in the program. Just list the major
-data structures—not every variable.]_
-
-There is an 80x24 2D array of Booleans that represents the cells, in
-row-major order. Additionally, there's a second parallel array used to
-double-buffer during the next generation computation.
-
-If an array element is True, the cell is alive, otherwise it's dead.
+pthred : basic thread datatype
 
 ## Functions
 
